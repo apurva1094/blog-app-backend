@@ -16,26 +16,11 @@ npm run dev
 Tech Stack
 
 Node.js
-
 Express.js
-
 MongoDB
-
 Mongoose
 
-
 Commit it → push.
-
-This makes your submission look **very professional**.
-
----
-
-##  Final Status
- Phase 1: **COMPLETED**  
- Repo: **SUBMISSION READY**  
- Proof link: **READY**
-
-When you’re ready, say **“Start Phase 2”** and I’ll guide you step-by-step like before
 
 Blog App Backend – Phase 2 ✅
 Overview
@@ -43,42 +28,29 @@ Overview
 Phase 2 of the Blog App Backend implements full backend functionality with authentication, blog management, and database integration.
 This phase ensures that users can securely register, login, and manage blogs with proper route protection.
 
-Features Implemented
+Features Implemented:
 User Authentication
-
 Register new users with hashed passwords
-
 Login existing users and receive JWT tokens
-
 Protected routes with auth middleware to ensure only authorized users can access certain endpoints
 
-Blog Management (CRUD)
-
+Blog Management (CRUD):
 Create Blog: Only logged-in users can create a blog
-
 Read Blogs: View all blogs or a single blog by ID
-
 Update Blog: Only the author can update their blog
-
 Delete Blog: Only the author can delete their blog
 
-Database
-
+Database:
 MongoDB Atlas used as the database
-
 Mongoose models:
-
 User – stores user info
-
 Blog – stores blog posts with a reference to the author
 
 Middleware
-
-auth.js ensures route protection using JWT
-
+auth.js ens:ures route protection using JWT
 Handles unauthorized access with proper error messages
 
-Folder Structure
+Folder Structure:
 blog-app-backend/
 │
 ├─ src/
@@ -103,39 +75,31 @@ blog-app-backend/
 ├─ package.json
 └─ package-lock.json
 
-Environment Variables (.env)
+Environment Variables (.env):
 PORT=5000
 MONGO_URI=<Your MongoDB Atlas Connection String>
 JWT_SECRET=<Your JWT Secret Key>
 
-How to Run
-
+1.How to Run
 Clone the repository:
-
 git clone https://github.com/apurva1094/blog-app-backend.git
 cd blog-app-backend
 
-
-Install dependencies:
-
+2.Install dependencies:
 npm install
 
-
-Add .env file with credentials (see above)
-
-Start the server:
-
+3.Add .env file with credentials (see above)
+4.Start the server:
 npm run dev
-
-
 Server runs on http://localhost:5000
 
-API Endpoints
-Authentication
+API Endpoints:
+Authentication:
 Method	Endpoint	Description
 POST	/api/auth/register	Register a new user
 POST	/api/auth/login	Login user and get JWT token
-Blogs
+
+Blogs:
 Method	Endpoint	Description
 POST	/api/blogs	Create a new blog (protected)
 GET	/api/blogs	Get all blogs
