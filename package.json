@@ -1,24 +1,32 @@
 {
   "name": "blog-app-backend",
   "version": "1.0.0",
-  "description": "Blog App Backend",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
     "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.22.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "description": "Backend setup using Node.js, Express, and MongoDB.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apurva1094/blog-app-backend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
-    "express": "^4.22.1",
-    "jsonwebtoken": "^9.0.3",
-    "mongoose": "^7.5.0"
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/apurva1094/blog-app-backend/issues"
   },
-  "devDependencies": {
-    "nodemon": "^3.1.11"
-  }
+  "homepage": "https://github.com/apurva1094/blog-app-backend#readme"
 }
