@@ -20,7 +20,7 @@ if (!process.env.MONGO_URI) {
   process.exit(1);
 }
 
-/* ================= MONGODB ================= */
+/* ================= MONGODB CONNECTION ================= */
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("✅ Connected to MongoDB"))
@@ -29,14 +29,13 @@ mongoose
     process.exit(1);
   });
 
-/* ================= ROUTES ================= */
+/* ================= API ROUTES ================= */
 // Example:
 // app.use("/api/auth", require("./routes/authRoutes"));
 // app.use("/api/posts", require("./routes/postRoutes"));
 
 /* ================= SERVER ================= */
 const PORT = process.env.PORT || 8080;
-
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
