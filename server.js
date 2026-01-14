@@ -9,6 +9,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+/* ================= BLOG ROUTES ================= */
+app.use("/blogs", require("./routes/blogRoutes"));
+
 /* ================= ROOT TEST ROUTE ================= */
 app.get("/", (req, res) => {
   res.json({ message: "Blog API running 🚀" });
@@ -28,11 +31,6 @@ mongoose
     console.error("❌ MongoDB connection error:", err);
     process.exit(1);
   });
-
-/* ================= API ROUTES ================= */
-// Example:
-// app.use("/api/auth", require("./routes/authRoutes"));
-// app.use("/api/posts", require("./routes/postRoutes"));
 
 /* ================= SERVER ================= */
 const PORT = process.env.PORT || 8080;
